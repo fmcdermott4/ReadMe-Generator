@@ -1,0 +1,14 @@
+{
+  "name": "goodreadmegenerator",
+  "version": "1.0.0",
+  "description": "Generate a good readme",
+  "main": "script.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Frank McDermott",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^8.0.0"
+  }
+}
