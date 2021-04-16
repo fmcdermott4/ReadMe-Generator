@@ -36,7 +36,22 @@ var questions = [
         type: 'list',
         name: 'license',
         message: 'Choose a license for your application:',
-        
+        choices: [
+            'Apache License',
+            'GNU GENERAL PUBLIC LICENSE',
+            'MIT License',
+            'BSD 2-Clause License',
+            'BSD 3-Clause License',
+            'Boost Software License - Version 1.0',
+            'CC0 1.0 Universal',
+            'Eclipse Public License - v 2.0',
+            'GNU AFFERO GENERAL PUBLIC LICENSE, V3',
+            'GNU GENERAL PUBLIC LICENSE, V2',
+            'GNU LESSER GENERAL PUBLIC LICENSE, V2.1',
+            'Mozilla Public License Version 2.0',
+            'The Unlicense'
+        ]
+
     }
 ]
 inquirer.prompt(questions).then((answers) => {
