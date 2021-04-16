@@ -4,33 +4,39 @@ var inquirer = require('inquirer');
 var questions = [
     {
         type: 'input',
-        name: 'projectTitle',
+        name: 'title',
         message: "What's your project title?"
     },
     {
         type: 'input',
-        name: 'projectDescription',
+        name: 'description',
         message: "What is your project description?"
     },
     {
         type: 'input',
-        name: 'projectInstallation',
+        name: 'installation',
         message: "What are your project's installation instructions?"
     },
     {
         type: 'input',
-        name: 'projectUsage',
+        name: 'usage',
         message: "What is your project usage information?"
     },
     {
         type: 'input',
-        name: 'projectContribution',
+        name: 'cContribution',
         message: "What are  your project's contribution guidelines?"
     },
     {
         type: 'input',
-        name: 'projectTest',
+        name: 'test',
         message: "What are your project's test instructions?"
+    },
+    {
+        type: 'list',
+        name: 'license',
+        message: 'Choose a license for your application:',
+        
     }
 ]
 inquirer.prompt(questions).then((answers) => {
