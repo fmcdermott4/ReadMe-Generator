@@ -3,13 +3,10 @@
 
 # Description
 
-	Generate a great Readme for your project using this Readme generator
+	Generate a great readme for your project using this readme generator.
 
 ## Table of Contents
 
-- [Good Readme Generator](#Good Readme Generator)
-- [Description](#description)
-* [Table of Contents](#table-of-contents)
   * [Installation](#installation)
   * [Usage](#usage)
   * [License](#license)
@@ -19,11 +16,11 @@
 
 ## Installation
 
-	Close my repository from GitHub
+	Clone the repository containing this project's code from GitHub
 
 ## Usage
 
-	Use the application in any terminal application by typing in node script.js
+	Use the application in any terminal setting by typing in node script.js
 
 ## License
 
@@ -31,11 +28,7 @@
 
 ## Contributing
 
-	inquirer is used to prompt the user in the terminal
-
-## Tests
-
-	there are no documented tests for this project
+	Inquirer is used for user prompts
 
 ## Questions
 
