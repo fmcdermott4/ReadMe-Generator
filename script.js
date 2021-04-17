@@ -37,7 +37,7 @@ var questions = [
         name: 'license',
         message: 'Choose a license for your application:',
         choices: [
-            '[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)',
+            'Apache License',
             'GNU GENERAL PUBLIC LICENSE',
             'MIT License',
             'BSD 2-Clause License',
@@ -64,10 +64,20 @@ var questions = [
     }
 ]
 inquirer.prompt(questions).then((answers) => {
+    // title
+    let title = "# " + answers.title;
+    let license = '\n'+ answers.license
+    let description = '\n\n # Description\r\n\n\t' + answers.description;
+    let tableOfContents = '\n\n## Table of Contents';
+    let installation = '\n\n## Installation\r\n\n\t' + answers.installation;
+
+
+
     
-    fs.writeFile('README.md', JSON.stringify(answers) , (err) =>
+    
+    let readme = title + license + description + tableOfContents + installation
+    
+    fs.writeFile('README.md', readme , (err) =>
         err ? console.error(err) : console.log('Success!')
     );
-    
-    console.log(answers.title);
-  });
+});
