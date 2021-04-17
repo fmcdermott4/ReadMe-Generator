@@ -1,6 +1,6 @@
 const fs = require('fs');
 var inquirer = require('inquirer');
-
+// Object of all the questions
 var questions = [
     {
         type: 'input',
@@ -63,8 +63,9 @@ var questions = [
         message: 'What is your email?'
     }
 ]
+// asks questions in console based on questions obect
 inquirer.prompt(questions).then((answers) => {
-    // title
+    // Create all the sections of the README
     let title = "# " + answers.title;
     let license = '\n'+ switchLicense(answers.license);
     let description = '\n\n# Description\n\n\t' + answers.description;
@@ -72,16 +73,18 @@ inquirer.prompt(questions).then((answers) => {
     let installation = '\n\n## Installation\n\n\t' + answers.installation;
     let usage = '\n\n## Usage\n\n\t' + answers.usage;
     let licenseDescription = '\n\n## License\n\n\t' + 'Application is covered under ' + answers.license ;
-    let contributing = '\n\n## Contributing\n\n\t' + answers.contributing;
+    let contributing = '\n\n## Contributing\n\n\t' + answers.contribution;
     let tests = '\n\n## Tests\r\n\n\t' + answers.test;
     let questions = '\n\n## Questions\n\n\t' + 'https://github.com/' +answers.gitHub + '/\n\t' + answers.email;   
     
+    // concatenate all the sections of the README
     let readme = title + license + description + tableOfContents + installation + usage + licenseDescription + contributing + tests + questions;
     
     fs.writeFile('README.md', readme , (err) =>
         err ? console.error(err) : console.log('Success!')
     );
 });
+// Finds correct path for license icon
 function switchLicense(license){
     let code;
     switch (license) {
@@ -127,7 +130,7 @@ function switchLicense(license){
     }
     return code;
 }
-
+// creates table of contents
 function tocs(x) {
     let toc;
     toc = `- [` + x + `](#` + x + `)\n- [Description](#description)\n* [Table of Contents](#table-of-contents)\n  * [Installation](#installation)\n  * [Usage](#usage)\n  * [License](#license)\n  * [Contributing](#contributing)\n  * [Tests](#tests)\n  * [Questions](#questions)`

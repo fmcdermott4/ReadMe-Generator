@@ -31,7 +31,7 @@
 
 ## Contributing
 
-	undefined
+	a
 
 ## Tests
 
