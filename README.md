@@ -1,13 +1,13 @@
-# a
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+# Good Readme Generator
+[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
 
 # Description
 
-	a
+	Generate a great Readme for your project using this Readme generator
 
 ## Table of Contents
 
-- [a](#a)
+- [Good Readme Generator](#Good Readme Generator)
 - [Description](#description)
 * [Table of Contents](#table-of-contents)
   * [Installation](#installation)
@@ -19,25 +19,25 @@
 
 ## Installation
 
-	a
+	Close my repository from GitHub
 
 ## Usage
 
-	a
+	Use the application in any terminal application by typing in node script.js
 
 ## License
 
-	Application is covered under Apache License 2.0
+	Application is covered under The Unlicense
 
 ## Contributing
 
-	a
+	inquirer is used to prompt the user in the terminal
 
 ## Tests
 
-	a
+	there are no documented tests for this project
 
 ## Questions
 
-	https://github.com/a/
-	a
+	https://github.com/fmcdermott4/
+	Please send an email to fmcdermott4@gmail.com with any questions you may have.
