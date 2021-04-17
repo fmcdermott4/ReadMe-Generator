@@ -92,19 +92,19 @@ function switchLicense(license){
             code = `[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)`
             break;
         case 'MIT License':
-            code = ``
+            code = `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`
             break;
         case 'BSD 2-Clause License':
-            code = ``
+            code = `[![License](https://img.shields.io/badge/License-BSD%202--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause)`
             break;
         case 'BSD 3-Clause License':
-            code = ``
+            code = `[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)`
             break;
         case 'Boost Software License - Version 1.0':
-            code = ``
+            code = `[![License](https://img.shields.io/badge/License-Boost%201.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)`
             break;
         case 'CC0 1.0 Universal':
-            code = ``
+            code = `[![License: CC0-1.0](https://img.shields.io/badge/License-CC0%201.0-lightgrey.svg)](http://creativecommons.org/publicdomain/zero/1.0/)`
             break;
         case 'Eclipse Public License - v 2.0':
             code = `[![License](https://img.shields.io/badge/License-EPL%202.0-red.svg)](https://opensource.org/licenses/EPL-2.0)`
