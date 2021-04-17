@@ -51,7 +51,16 @@ var questions = [
             'Mozilla Public License Version 2.0',
             'The Unlicense'
         ]
-
+    },
+    {
+        type: 'input',
+        name: 'gitHub',
+        message: 'What is your GitHub user name?'
+    },
+    {
+        type: 'input',
+        name: 'email',
+        message: 'What is your email?'
     }
 ]
 inquirer.prompt(questions).then((answers) => {

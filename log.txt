@@ -1,1 +1,1 @@
-{"title":"a","description":"a","installation":"a","usage":"a","cContribution":"a","test":"a","license":"The Unlicense"}
+{"title":"a","description":"a","installation":"a","usage":"a","cContribution":"a","test":"a","license":"Apache License","gitHub":"a","email":"a"}
