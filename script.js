@@ -107,7 +107,7 @@ function switchLicense(license){
             code = ``
             break;
         case 'Eclipse Public License - v 2.0':
-            code = `[![License](https://img.shields.io/badge/License-EPL%201.0-red.svg)](https://opensource.org/licenses/EPL-2.0)`
+            code = `[![License](https://img.shields.io/badge/License-EPL%202.0-red.svg)](https://opensource.org/licenses/EPL-2.0)`
             break;
         case 'GNU AFFERO GENERAL PUBLIC LICENSE, V3':
             code = `[![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)`
