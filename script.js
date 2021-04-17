@@ -68,7 +68,7 @@ inquirer.prompt(questions).then((answers) => {
     let title = "# " + answers.title;
     let license = '\n'+ switchLicense(answers.license);
     let description = '\n\n# Description\n\n\t' + answers.description;
-    let tableOfContents = '\n\n## Table of Contents';
+    let tableOfContents = '\n\n## Table of Contents\n\n' + tocs(answers.title);
     let installation = '\n\n## Installation\n\n\t' + answers.installation;
     let usage = '\n\n## Usage\n\n\t' + answers.usage;
     let licenseDescription = '\n\n## License\n\n\t' + 'Application is covered under ' + answers.license ;
@@ -76,7 +76,7 @@ inquirer.prompt(questions).then((answers) => {
     let tests = '\n\n## Tests\r\n\n\t' + answers.test;
     let questions = '\n\n## Questions\n\n\t' + 'https://github.com/' +answers.gitHub + '/\n\t' + answers.email;   
     
-    let readme = title + license + description + tableOfContents + installation + usage + licenseDescription + contributing + tests + questions
+    let readme = title + license + description + tableOfContents + installation + usage + licenseDescription + contributing + tests + questions;
     
     fs.writeFile('README.md', readme , (err) =>
         err ? console.error(err) : console.log('Success!')
@@ -126,4 +126,10 @@ function switchLicense(license){
             break;
     }
     return code;
+}
+
+function tocs(x) {
+    let toc;
+    toc = `- [` + x + `](#` + x + `)\n- [Description](#description)\n* [Table of Contents](#table-of-contents)\n  * [Installation](#installation)\n  * [Usage](#usage)\n  * [License](#license)\n  * [Contributing](#contributing)\n  * [Tests](#tests)\n  * [Questions](#questions)`
+    return toc;
 }
