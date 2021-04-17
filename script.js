@@ -37,8 +37,8 @@ var questions = [
         name: 'license',
         message: 'Choose a license for your application:',
         choices: [
-            'Apache License',
-            'GNU GENERAL PUBLIC LICENSE',
+            'Apache License 2.0',
+            'GNU GENERAL PUBLIC LICENSE v3.0',
             'MIT License',
             'BSD 2-Clause License',
             'BSD 3-Clause License',
@@ -66,12 +66,12 @@ var questions = [
 inquirer.prompt(questions).then((answers) => {
     // title
     let title = "# " + answers.title;
-    let license = '\n'+ answers.license
+    let license = '\n'+ switchLicense(answers.license);
     let description = '\n\n# Description\n\n\t' + answers.description;
     let tableOfContents = '\n\n## Table of Contents';
     let installation = '\n\n## Installation\n\n\t' + answers.installation;
     let usage = '\n\n## Usage\n\n\t' + answers.usage;
-    let licenseDescription = '\n\n## License\n\n\t' + answers.license;
+    let licenseDescription = '\n\n## License\n\n\t' + 'Application is covered under ' + answers.license ;
     let contributing = '\n\n## Contributing\n\n\t' + answers.contributing;
     let tests = '\n\n## Tests\r\n\n\t' + answers.test;
     let questions = '\n\n## Questions\n\n\t' + 'https://github.com/' +answers.gitHub + '/\n\t' + answers.email;   
@@ -82,3 +82,26 @@ inquirer.prompt(questions).then((answers) => {
         err ? console.error(err) : console.log('Success!')
     );
 });
+function switchLicense(license){
+    let code;
+    switch (license) {
+        case 'Apache License 2.0':
+            code = `[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`
+            break;
+        case 'GNU GENERAL PUBLIC LICENSE v3.0':
+            code = `[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)`
+            break;
+        // 'MIT License',
+        // 'BSD 2-Clause License',
+        // 'BSD 3-Clause License',
+        // 'Boost Software License - Version 1.0',
+        // 'CC0 1.0 Universal',
+        // 'Eclipse Public License - v 2.0',
+        // 'GNU AFFERO GENERAL PUBLIC LICENSE, V3',
+        // 'GNU GENERAL PUBLIC LICENSE, V2',
+        // 'GNU LESSER GENERAL PUBLIC LICENSE, V2.1',
+        // 'Mozilla Public License Version 2.0',
+        // 'The Unlicense'
+    }
+    return code;
+}
