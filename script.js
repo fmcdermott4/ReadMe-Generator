@@ -64,9 +64,10 @@ var questions = [
     }
 ]
 inquirer.prompt(questions).then((answers) => {
-    console.log(answers)
-    fs.writeFile('log.txt', JSON.stringify(answers) , (err) =>
-        err ? console.error(err) : console.log('Success!')
-    );
-    // console.log(JSON.stringify(answers, null, '  '));
+    
+    // fs.writeFile('log.txt', JSON.stringify(answers) , (err) =>
+    //     err ? console.error(err) : console.log('Success!')
+    // );
+    
+    console.log(answers.title);
   });
