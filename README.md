@@ -1,1 +1,1 @@
-# ReadMe-Generator
+{"title":"a","description":"a","installation":"a","usage":"a","cContribution":"a","test":"a","license":"[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)","gitHub":"a","email":"a"}
