@@ -75,13 +75,13 @@ inquirer.prompt(questions).then((answers) => {
     let licenseDescription = '\n\n## License\n\n\t' + 'Application is covered under ' + answers.license ;
     let contributing = '\n\n## Contributing\n\n\t' + answers.contribution;
     let tests = '\n\n## Tests\r\n\n\t' + answers.test;
-    let questions = '\n\n## Questions\n\n\t' + 'https://github.com/' +answers.gitHub + '/\n\t' + answers.email;   
+    let questions = '\n\n## Questions\n\n\t' + 'https://github.com/' +answers.gitHub + '/\n\tPlease send an email to ' + answers.email + ' with any questions you may have.';   
     
     // concatenate all the sections of the README
     let readme = title + license + description + tableOfContents + installation + usage + licenseDescription + contributing + tests + questions;
-    
+    // writes file to README.md
     fs.writeFile('README.md', readme , (err) =>
-        err ? console.error(err) : console.log('Success!')
+        err ? console.error(err) : console.log('Successful README.md creation!')
     );
 });
 // Finds correct path for license icon
