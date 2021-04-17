@@ -24,7 +24,7 @@ var questions = [
     },
     {
         type: 'input',
-        name: 'cContribution',
+        name: 'contribution',
         message: "What are  your project's contribution guidelines?"
     },
     {
@@ -70,12 +70,13 @@ inquirer.prompt(questions).then((answers) => {
     let description = '\n\n # Description\r\n\n\t' + answers.description;
     let tableOfContents = '\n\n## Table of Contents';
     let installation = '\n\n## Installation\r\n\n\t' + answers.installation;
-
-
-
+    let usage = '\n\n## Usage\r\n\n\t' + answers.usage;
+    let licenseDescription = '\n\n## License\r\n\n\t' + answers.license;
+    let contributing = '\n\n## Contributing\r\n\n\t' + answers.contributing;
+    let tests = '\n\n## Tests\r\n\n\t' + answers.test;
+    let questions = '\n\n## Questions\r\n\n\t' + 'https://github.com/fmcdermott4/' +answers.github + '\r\n\t' + answers.email;   
     
-    
-    let readme = title + license + description + tableOfContents + installation
+    let readme = title + license + description + tableOfContents + installation + usage + licenseDescription + contributing + tests + questions
     
     fs.writeFile('README.md', readme , (err) =>
         err ? console.error(err) : console.log('Success!')
